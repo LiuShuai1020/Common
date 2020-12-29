@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- 白色 -->
+    <color name="color_theme_white">#FFFFFF</color>
+    <!-- 黑色 -->
+    <color name="color_theme_black">#25262c</color>
+    <!-- 红色 -->
+    <color name="color_theme_red">#CA001A</color>
+    <!-- 透明色 -->
+    <color name="color_theme_transparent">#00000000</color>
+    <!-- 绿色 -->
+    <color name="color_theme_green">#00ff00</color>
+    <!-- 蓝色 -->
+    <color name="color_theme_blue">#34A7F2</color>
+    <!-- 灰色 -->
+    <color name="color_theme_gray">#EFEFEF</color>
+    <!-- 深灰色 -->
+    <color name="color_theme_dark_gray">#656565</color>
+    <!-- 浅灰色 -->
+    <color name="color_theme_light_gray">#8c8e93</color>
+    <!-- 米色 -->
+    <color name="color_theme_beige">#F5F5F5</color>
+    <!-- 页面中所有的线的颜色-->
+    <color name="color_divide">#EEEEEE</color>
+
+</resources>

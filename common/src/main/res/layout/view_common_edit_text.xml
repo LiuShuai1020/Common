@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/leftInputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_0"
+        android:textColor="@color/color_theme_dark_gray"
+        android:textSize="@dimen/font_level_two"
+        app:layout_constraintBottom_toBottomOf="@id/inputView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/inputView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputView"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="start|center"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/color_theme_dark_gray"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/font_level_two"
+        app:layout_constraintBottom_toTopOf="@+id/inputViewLine"
+        app:layout_constraintLeft_toRightOf="@id/leftInputTitle"
+        app:layout_constraintRight_toLeftOf="@id/inputViewClearButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="LabelFor,UnusedAttribute" />
+
+    <View
+        android:id="@+id/inputViewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#34A7F2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputView" />
+
+    <ImageView
+        android:id="@+id/inputViewClearButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/dp_0"
+        android:paddingEnd="@dimen/dp_10"
+        android:src="@drawable/icon_clear"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/inputView"
+        app:layout_constraintRight_toLeftOf="@+id/inputViewSearchButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/inputViewSearchButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_0"
+        android:src="@drawable/icon_search"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/inputViewErrorView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_0"
+        android:textColor="@color/color_theme_red"
+        android:textSize="@dimen/font_level_four"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputViewLine" />
+
+    <View
+        android:id="@+id/clickLayoutView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

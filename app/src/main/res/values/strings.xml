@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Common</string>
+    <string name="common_hint">提示</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_determine">确定</string>
 </resources>

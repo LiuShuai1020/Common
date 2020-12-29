@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 正常 -->
+    <item android:drawable="@drawable/background_custom_button_unselected" android:state_enabled="true" android:state_pressed="false" />
+    <!-- 按下 -->
+    <item android:drawable="@drawable/background_custom_button_select" android:state_enabled="true" android:state_pressed="true" />
+    <!-- 禁用 -->
+    <item android:drawable="@drawable/background_custom_button_unselected" android:state_enabled="false" android:state_pressed="false" />
+</selector>
