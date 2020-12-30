@@ -8,8 +8,23 @@ import android.util.AttributeSet
  * @author liu shuai
  * 描述：自定义Button
  */
-class CustomButton(context: Context, attributeSet: AttributeSet) :
-    AppCompatTextView(context, attributeSet) {
+class CustomButton : AppCompatTextView {
+
+    constructor(context: Context) : super(context) {
+
+    }
+
+    constructor(context: Context, attributeSet: AttributeSet) : super(context, attributeSet) {
+
+    }
+
+    constructor(context: Context, attributeSet: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attributeSet,
+        defStyleAttr
+    ) {
+
+    }
 
     init {
         init()

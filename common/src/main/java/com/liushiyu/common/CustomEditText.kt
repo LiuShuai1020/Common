@@ -18,7 +18,23 @@ import kotlinx.android.synthetic.main.view_common_edit_text.view.*
  * @author liu shuai
  * 描述：输入框
  */
-class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet) {
+class CustomEditText : LinearLayout {
+
+    constructor(context: Context) : super(context) {
+
+    }
+
+    constructor(context: Context, attributeSet: AttributeSet) : super(context, attributeSet) {
+
+    }
+
+    constructor(context: Context, attributeSet: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attributeSet,
+        defStyleAttr
+    ) {
+
+    }
 
     companion object {
         const val SLING_HR_EDIT_TEXT_TYPE_SELECT = 10000
@@ -89,7 +105,11 @@ class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayou
         leftInputTitle.text = leftTitle
     }
 
-    fun setInputValue(inputValue: String = "", prohibitChange: Boolean = false, changeLineColor: Boolean = true) {
+    fun setInputValue(
+        inputValue: String = "",
+        prohibitChange: Boolean = false,
+        changeLineColor: Boolean = true
+    ) {
         inputView.text = Editable.Factory.getInstance().newEditable(inputValue)
         inputView.setSelection(inputValue.length)
         this.prohibitChange = prohibitChange
@@ -104,20 +124,20 @@ class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayou
                 clickLayoutView.visibility = View.GONE
                 if (changeLineColor) {
                     inputViewLine.setBackgroundColor(
-                            ContextCompat.getColor(
-                                    context,
-                                    R.color.color_divide
-                            )
+                        ContextCompat.getColor(
+                            context,
+                            R.color.color_divide
+                        )
                     )
                 }
             } else {
                 clickLayoutView.visibility = View.VISIBLE
                 if (changeLineColor) {
                     inputViewLine.setBackgroundColor(
-                            ContextCompat.getColor(
-                                    context,
-                                    R.color.color_theme_blue
-                            )
+                        ContextCompat.getColor(
+                            context,
+                            R.color.color_theme_blue
+                        )
                     )
                 }
             }
@@ -131,10 +151,10 @@ class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayou
             hideClearButton()
             setErrorTextValue(null)
             inputViewLine.setBackgroundColor(
-                    ContextCompat.getColor(
-                            context,
-                            R.color.color_divide
-                    )
+                ContextCompat.getColor(
+                    context,
+                    R.color.color_divide
+                )
             )
         } else {
             clickLayoutView.visibility = View.GONE
@@ -146,10 +166,10 @@ class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayou
 
                 if (changeLineColor) {
                     inputViewLine.setBackgroundColor(
-                            ContextCompat.getColor(
-                                    context,
-                                    R.color.color_divide
-                            )
+                        ContextCompat.getColor(
+                            context,
+                            R.color.color_divide
+                        )
                     )
                 }
 
@@ -161,10 +181,10 @@ class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayou
                 inputView.isFocusableInTouchMode = true
 
                 inputViewLine.setBackgroundColor(
-                        ContextCompat.getColor(
-                                context,
-                                R.color.color_theme_blue
-                        )
+                    ContextCompat.getColor(
+                        context,
+                        R.color.color_theme_blue
+                    )
                 )
             }
         }
@@ -185,35 +205,35 @@ class CustomEditText(context: Context, attributeSet: AttributeSet) : LinearLayou
     fun showTips(tips: String?) {
         setErrorTextValue(tips)
         YoYo.with(Techniques.Shake)
-                .duration(700)
-                .withListener(object : Animator.AnimatorListener {
-                    override fun onAnimationRepeat(animation: Animator?) {
-                    }
-
-                    override fun onAnimationEnd(animation: Animator?) {
-                        inputViewLine.setBackgroundColor(
-                                ContextCompat.getColor(
-                                        context,
-                                        R.color.color_theme_blue
-                                )
-                        )
-                    }
-
-                    override fun onAnimationCancel(animation: Animator?) {
-
-                    }
-
-                    override fun onAnimationStart(animation: Animator?) {
-                        inputViewLine.setBackgroundColor(
-                                ContextCompat.getColor(
-                                        context,
-                                        R.color.color_theme_red
-                                )
-                        )
-                    }
+            .duration(700)
+            .withListener(object : Animator.AnimatorListener {
+                override fun onAnimationRepeat(animation: Animator?) {
                 }
-                )
-                .playOn(this)
+
+                override fun onAnimationEnd(animation: Animator?) {
+                    inputViewLine.setBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.color_theme_blue
+                        )
+                    )
+                }
+
+                override fun onAnimationCancel(animation: Animator?) {
+
+                }
+
+                override fun onAnimationStart(animation: Animator?) {
+                    inputViewLine.setBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.color_theme_red
+                        )
+                    )
+                }
+            }
+            )
+            .playOn(this)
     }
 
     private fun inputViewClearButtonClick() {
